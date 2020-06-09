@@ -123,13 +123,16 @@ func main() {
 	e.FSM.AddHandler(ThreadGear, PowerOffDown, PoweroffHandle)
 
 	_,err:=e.FSM.Call(FirstGearDown)
-	fmt.Println(err)
-
+	if err!=nil {
+		fmt.Println(err)
+	}
 	_,err=e.FSM.Call(SecondGearDown)
-	fmt.Println(err)
-
+	if err!=nil {
+		fmt.Println(err)
+	}
 	_,err=e.FSM.Call(PowerOffDown)
-	fmt.Println(err)
-
+	if err!=nil {
+		fmt.Println(err)
+	}
 
 }
